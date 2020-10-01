@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/productListFragmentContainer">
+
+
+    <fragment
+        android:id="@+id/productListFragmentContainer"
+        android:name="com.todo.trabfinalfeltros.fragments.ProductListFragment"
+        android:label="fragment_product_list"
+        tools:layout="@layout/fragment_product_list" >
+        <action
+            android:id="@+id/navigateToProductFragment"
+            app:destination="@id/productFragmentContainer" />
+    </fragment>
+    <fragment
+        android:id="@+id/productFragmentContainer"
+        android:name="com.todo.trabfinalfeltros.fragments.ProductFragment"
+        android:label="fragment_product" />
+        <argument
+            android:name="product"
+            app:argType="com.todo.trabfinalfeltros.model.Product" />
+</navigation>
